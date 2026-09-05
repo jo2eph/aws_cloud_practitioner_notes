@@ -1,4 +1,4 @@
-# Module 1: Introduction to the Cloud
+# MODULE 1: INTRODUCTION TO THE CLOUD
 
 ---
 
@@ -83,3 +83,7 @@ Can deploy cloud resources in multiple ways, each type offers unique benefits an
 - **AWS Responsibilities**
   - Protect infrastructure that runs all of the services
   - Hardware, software, networking, facilities that run AWS
+
+---
+
+Next: [Module 2: Compute in the Cloud](https://github.com/jo2eph/aws_cloud_practitioner_notes/tree/main/02_Compute_in_the_Cloud)
