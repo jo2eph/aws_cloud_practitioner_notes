@@ -247,6 +247,44 @@ Auto Scaling group is configured with three key settings:
 
 ## Messaging and Queuing
 
+### Key takeaways: Decoupling services
+
+- **Monolithic applications**
+  - Applications consist of multiple components working together to transmit data, fulfill requests, and keep application running smoothly
+  - In traditional approach, components (i.e. database logic, web application servers, user interfaces, business logic) are tightly coupled
+  - Tightly coupled: if one component fails, it causes other components to fail, potentially bringing down entire application
+
+- **Microservices architecture**
+  - Improves availability and resilience
+  - Architecture components are loosely coupled – if one component fails, the others still function normally
+  - Communication between components remains intact
+  - Failure of single component does not impact entire system
+  - Greater flexibility and reliability
+
+### Supporting scalable and reliable cloud communication
+
+Amazon EventBridge, SNS, and SQS are AWS services that help different parts of applications communicate effectively in the cloud.
+These services support building event-driven and message-based systems
+Together, they help create scalable, reliable applications that can handle tight traffic and enhance communication
+
+#### EventBridge
+
+- **EventBridge:** serverless service that helps connect different parts of application using events, helping to build scalable, event-driven systems
+- Route events from sources (i.e. custom apps, AWS services, third-party software) to other applications
+- Simplifies process of receiving, filtering, transforming, and delivering events
+
+#### Amazon SQS
+
+- **Amazon Simple Queue Service (SQS):** message queuing service that facilitates reliable communication between software components
+- Send, store, receive messages at any scale
+- Ensures messages are not lost
+- Applications place messages into queue, and a user or service retrieves the message, processes it, and then removes it from queue
+
+#### Amazon SNS
+
+- **Amazon Simple Notification Service (SNS):** publish-subscribe service publishers use to send messages to subscribers through SNS topics
+- Subscribers can include web servers, email addresses, Lambda functions, and various other endpoints
+
 ---
 
 Previous: [Module 1: Introduction to the Cloud](https://github.com/jo2eph/aws_cloud_practitioner_notes/tree/main/01_Introduction_to_the_Cloud)
