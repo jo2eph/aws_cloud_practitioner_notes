@@ -213,6 +213,36 @@ Auto Scaling group is configured with three key settings:
 
 ## Directing Traffic with Elastic Load Balancing
 
+### Elastic Load Balancing
+
+- **Elastic Load Balancing (ELB):** Automatically distributes incoming application traffic across multiple resources (i.e. EC2 instances) to optimize performance and reliability
+- Load balancer serves as single point of contact for all incoming web traffic to an Auto Scaling group
+
+### ELB benefits
+
+- Efficient traffic distribution
+  - ELB automatically distributes across EC2 instances
+  - Prevent overload on single instance and optimizing resource utilization
+- Automatic scaling
+  - ELB scales with traffic
+  - Automatically adjusts to changes in demand as backend instances are added or removed
+- Simplified management
+  - ELB decouples frontend and backend tiers and reduces manual synchronization
+  - Handles maintenance, updates, and failover to ease operational overhead
+
+### Routing methods
+
+![image](./images/routing_methods.png)
+
+- **Round Robin**
+  - Distributes traffic evenly across all available servers in cyclic manner
+- **Least Connections**
+  - Routes traffic to server with fewest active connections, maintaining balanced load
+- **IP Hash**
+  - Uses client’s IP address to consistently route traffic to same server
+- **Least Response Time**
+  - Directs traffic to server with fastest response time, minimizing latency
+
 ---
 
 ## Messaging and Queuing
