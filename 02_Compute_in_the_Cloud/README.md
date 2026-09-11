@@ -30,6 +30,38 @@
 
 ---
 
+## How EC2 Works
+
+---
+
+## Amazon EC2 Instance Types
+
+---
+
+## How to Provision AWS Resources
+
+---
+
+## Amazon EC2 Pricing
+
+---
+
+## Scaling Amazon EC2
+
+---
+
+## Directing Traffic with Elastic Load Balancing
+
+---
+
+## Messaging and Queuing
+
+---
+
+## 
+
+---
+
 Previous: [Module 1: Introduction to the Cloud](https://github.com/jo2eph/aws_cloud_practitioner_notes/tree/main/01_Introduction_to_the_Cloud)
 
 Next: [Module 3: Exploring Compute Services](https://github.com/jo2eph/aws_cloud_practitioner_notes/tree/main/03_Exploring_Compute_Services)
