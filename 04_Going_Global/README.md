@@ -46,9 +46,70 @@
 
 ## Diving Deeper into AWS Global Infrastructure
 
+### Deploying multi-Region and multi-AZ resources
+
+- **High availability:**
+  - Capability of a system to operate continuously without failing
+  - Applications can handle failure of individual components without significant downtime
+- **Agility:**
+  - Ability to quickly adapt to changing requirements or market conditions
+  - With AWS infrastructure in place, you can modify and deploy services rapidly
+- **Elasticity:**
+  - Ability of a system to scale resources up or down automatically in response to changes in demand
+
+### Edge locations
+
+- AWS has global edge network that provides quicker content access to users outside of standard Regions
+- Edge locations strategically placed in areas like Atlanta or Shanghai to provide low-latency access to AWS services and content delivery
+- Edge locations offer multiple services to run closer to end users
+- Includes AWS networking services like Amazon CloudFront
+  - CloudFront: a Content Delivery Network (CDN) and caching system
+
 ---
 
 ## Infrastructure and Automation
+
+### CloudFormation
+
+- **CloudFormation:** Service that helps model and set up AWS resources
+- Spend less time managing resources and more time focusing on applications
+- Define your infrastructure as code
+- Create template that describes all the AWS resources you want (e.g. EC2 instances), CloudFormation takes care of provisioning and configuring these resources
+
+### Interacting with AWS resources
+
+#### Programmatic Access
+
+- AWS CLI, AWS SDKs
+- Best suited for developers and those familiar with coding languages
+- AWS CLI
+  - Manage multiple AWS services directly from command line
+  - Can automate tasks through scripts
+- AWS SDKs
+  - Integrate AWS services into applications by providing APIs for various programming languages
+  - AWS provides documentation and sample code
+- Use cases for AWS CLI actions and SDKs:
+  - AWS CLI: Automate routine tasks
+    - Example: Write a script to provide routine backups for service such as Amazon Elastic Block Store (EBS)
+  - SDKs: Invoke APIs for one part of application process
+    - Example: Use SDK to store user data in AWS storage service (e.g. S3)
+
+#### AWS Management Console
+
+- Web interface for managing AWS services
+- Offer quick access to services, search functionality, simplified workflows
+- Great option for those new to the cloud or users with minimal or no development experience
+- Use cases for console:
+  - Billing and cost optimization dashboards and visualizations
+  - Services focused on graphical representations (e.g. Amazon QuickSight and Amazon Neptune)
+
+#### Infrastructure as Code
+
+- IaC tools such as CloudFormation
+- Automate resource management across your organization with AWS service integrations offering efficient and repeatable resource creation and management
+- Use cases for CloudFormation:
+  - Managing infrastructure with DevOps such as continuous integration and delivery (CI/CD) pipelines
+  - Scaling resources (e.g. EC2 instances) to multi-Region applications in consistent, repeatable way
 
 ---
 
