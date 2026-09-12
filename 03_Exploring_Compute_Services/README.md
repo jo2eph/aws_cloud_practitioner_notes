@@ -73,9 +73,119 @@
 
 ## Containers and Orchestration on AWS
 
+### Containers and VMs
+
+- **Container** packages your application with everything it needs to run, so it works the same on any computer
+- Containers are faster and lighter than Virtual Machines (VMs) since they share the host computer’s OS
+- VMs use hypervisor to run full, separate OS, making them less resource-efficient and have longer startup times
+
+![image](./images/vms_containers.png)
+
+### Deployment consistency with containers
+
+- When developer’s environment differs from staging or production, deployments can fail and become difficult to debug
+- Containers keep application’s environment consistent everywhere
+- Makes deployments smoother and assist troubleshooting
+
+- As containerized applications scale, managing them becomes complex
+- Setup starting with a few containers on a single host can quickly grow into hundreds of containers across multiple hosts
+- Manually handling container lifecycle, monitoring, and general operations becomes unsustainable
+- **Orchestration** tools automate deployment, scaling, and management to keep everything running smoothly
+
+### AWS container services
+
+AWS has set of tools for managing containers that fits into three categories:
+
+- Orchestration
+- Registry
+- Compute
+
+#### Amazon ECS
+
+- **Amazon Elastic Container Service (ECS):** Scalable container orchestration service for running and managing containers on AWS (e.g. Docker containers)
+
+- Amazon ECS launch types:
+  - **Amazon ECS with Amazon EC2**
+    - Ideal for small-to-medium businesses that need full control over infrastructure
+    - Suitable for custom applications requiring specific hardware or networking configurations, with flexibility of EC2 and simplicity of ECS
+  - **Amazon ECS with AWS Fargate**
+    - Ideal for startups or small teams building web applications with variable traffic
+    - Serverless option, no management required
+
+#### Amazon EKS
+
+- **Amazon Elastic Kubernetes Service (EKS):** Fully managed service for running Kubernetes on AWS
+- Simplifies deploying, managing, and scaling containerized applications using open-sourced Kubernetes
+
+- Amazon EKS launch types:
+  - **Amazon EKS with Amazon EC2**
+    - Ideal for enterprises needing full control over infrastructure
+    - Offers deep customization of EC2 instances alongside Kubernetes scalability
+    - Ideal for complex, large-scale workloads
+  - **Amazon EKS with AWS Fargate**
+    - Great for teams wanting Kubernetes flexibility without managing servers
+    - Combines Kubernetes power with serverless simplicity
+
+#### Amazon ECR
+
+- **Amazon Elastic Container Registry (ECR):** Store, manage, and deploy container images
+- Supports container images that follow the Open Container Initiative (OCI) standards
+- Can push, pull, and manage images in your ECR repositories using standard container tooling and CLIs
+
+#### Fargate
+
+- **AWS Fargate:** Serverless compute engine for containers
+- Works with both ECS and EKS
+- Container hosting platform (ECS and EKS are both orchestration services)
+- You do not need to provision or manage servers
+- Fargate manages server infrastructure for you
+- Pay only for the resources that are required to run your containers
+
 ---
 
 ## Additional Compute Services
+
+AWS offers purpose-built services for specific needs (i.e.g streamlining web application deployment, managing batch workloads, providing virtual servers, extending cloud infrastructure to on-premises data centers)
+
+### Elastic Beanstalk
+
+- **Elastic Beanstalk:** Fully managed service that streamlines deployment, management, and scaling of web applications
+- Simplified provisioning, scaling, load balancing, and application health monitoring
+- Supports various programming languages and frameworks (i.e. Java, .NET, Python, Node.js, Docker)
+- Provides full control over underlying AWS resources while automating many operational tasks
+- Good for:
+  - Deploying and managing web applications, RESTful APIs, mobile backend services, and microservices architectures, with automated scaling and simplified infrastructure management
+
+### AWS Batch
+
+- **AWS Batch:** Fully managed service used to run batch computing workloads on AWS
+- Automatically schedules, manages, and scales compute resources for batch jobs
+- Parallel processing support
+- Optimizes resource allocation based on job requirements
+- Good for:
+  - Processing large-scale, parallel workloads in areas like scientific computing, financial risk analysis, media transcoding, big data processing, machine learning training, genomics research
+
+### Lightsail
+
+- **Lightsail:** Cloud service that offers virtual private servers (VSPs), storage, databases, and networking at a predictable monthly price
+- Ideal for small businesses, basic workloads, and developers seeking a straightforward AWS experience
+- Good for:
+  - Basic web applications
+  - Low-traffic websites
+  - Development and testing environments
+  - Small business websites
+  - Blogs
+  - Learning cloud services
+
+### Outposts
+
+- **AWS Outposts:** Fully managed hybrid cloud solution that extends AWS infrastructure and services to on-premises data centers
+- Provides consistent experience between on-premises and AWS Cloud, offering compute, storage, and networking components
+- Good for:
+  - Low-latency applications
+  - Data processing in remote locations
+  - Migrating and modernizing legacy applications
+  - Meeting regulatory compliance or data residency requirements
 
 ---
 
